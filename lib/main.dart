@@ -1,5 +1,5 @@
-import 'package:calls/contact_detail.dart';
 import 'package:flutter/material.dart';
+import 'contact_detail.dart';
 
 void main() {
   runApp(const MaterialApp(home: MyWidget()));
@@ -13,6 +13,8 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  Color warnaIconAwal = Colors.grey;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,19 +47,41 @@ class _MyWidgetState extends State<MyWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [Text("All"), SizedBox(width: 100), Text("Missed Calls")],
           ),
-          SizedBox(height: 30),
+
+          // ListView.builder(
+          //   itemCount: 8,
+          //   itemBuilder: (context, index) {
+          //     return Expanded(
+          //       child: ListTile(
+          //         leading: Icon(Icons.phone_callback),
+          //         title: Text("+62 812-3456-7890"),
+          //         subtitle: Row(
+          //           children: [
+          //             Icon(Icons.sim_card, size: 16),
+          //             Text("Scam", style: TextStyle(color: Colors.red)),
+          //             SizedBox(width: 5),
+          //             Text("Indonesia"),
+          //           ],
+          //         ),
+          //       ),
+          //     );
+          //   },
+          // ),
+
+          // GAGAL
+
           Column(
             children: [
               ListTile(
-                leading: Icon(Icons.phone_callback),
-                title: Text("+62 812-3456-7890"),
-                subtitle: Row(
-                  children: [
-                    Icon(Icons.sim_card, size: 16),
-                    Text("Scam", style: TextStyle(color: Colors.red)),
-                    SizedBox(width: 5),
-                    Text("Indonesia"),
-                  ],
+          leading: Icon(Icons.phone_callback),
+          title: Text("+62 812-3456-7890"),
+          subtitle: Row(
+            children: [
+              Icon(Icons.sim_card, size: 16),
+              Text("Scam", style: TextStyle(color: Colors.red)),
+              SizedBox(width: 5),
+              Text("Indonesia"),
+            ],
                 ),
                 trailing: IconButton(
                   icon: Icon(Icons.info_outline),
